@@ -76,7 +76,7 @@ const projects = [
    },
  
    {
-      name: "HR ASSISTANT",
+      name: "HR Assistant",
       link:"",
       description: "Internal web app for the company's HR's management system. Eg. Employee management, Attendance management with QR scan time in/out, etc. My role for this was to create the entire web app alone.",
       tools: "AngularJS, NodeJs, SocketIO, VB.Net",
@@ -111,7 +111,7 @@ export default function Head() {
         {
             projects.map(item => {
                 return <div key={item.image} className="mt-5rem">
-                    <h4>
+                    <h4 style={{fontWeight:"bold",textDecoration:"underline"}}>
                         {
                             item.link?
                                 <Link href={item.link} target="_blank">
