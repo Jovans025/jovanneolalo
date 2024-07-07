@@ -6,7 +6,7 @@ const projects = [
       name: "Cilantro",
       link:"https://cilantropass.com/",
       description: "An online ordering for a restaurant. My role for this was to create new pages and functionalities based on the clients daily needs.",
-      tools: "NodeJs, ReactJs, Firebase, Stripe",
+      tools: "NodeJs, ReactJs(NextJs), Firebase, Stripe",
       duration:"1 years",
       image:"/images/cilantro.png",
       status:"Active (2024)"
@@ -15,7 +15,7 @@ const projects = [
       name: "ESG Playbook",
       link:"https://www.esgplaybook.com/",
       description: "A reporting tool used by big companies to monitor their ESG sustainability. My role for this was to create new pages and functionalities based on the clients daily needs.",
-      tools: "NodeJs, ReactJs, Firebase",
+      tools: "NodeJs, ReactJs(NextJs), Firebase",
       duration:"3 years",
       image:"/images/esg.jpg",
       status:"Active (2023)"

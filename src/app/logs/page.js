@@ -17,6 +17,11 @@ export default function Resume() {
                 ...a.data(),
                 id: a.id
             }
+        }).sort((a,b)=>{
+            const adate= new Date(a.date.toDate().toString());
+            const bdate= new Date(b.date.toDate().toString())
+
+            return bdate - adate
         }) 
 
         setLogs([...logs])
