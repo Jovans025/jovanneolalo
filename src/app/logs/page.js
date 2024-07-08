@@ -43,7 +43,7 @@ export default function Resume() {
                     <tr key={item.id}>
                         <td>{new Date(item.date.toDate().toString()).toString()}</td>
                         <td>{item.agent}</td>
-                        <td>{ JSON.stringify(item.info) }</td>
+                        <td>{ item.location }</td>
                     </tr>
                 ))
             }

@@ -1,5 +1,6 @@
 import firebase from "firebase/compat/app";  
 import "firebase/compat/firestore";
+import "firebase/compat/auth";
 
 // if a Firebase instance doesn't exist, create one
 if (!firebase.apps.length) {

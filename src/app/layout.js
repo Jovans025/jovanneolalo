@@ -14,6 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return  <>  
+      {/* <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />  */}
       <html lang="en">
         <body className={`${roboto.className}`}>{children}</body>
       </html>

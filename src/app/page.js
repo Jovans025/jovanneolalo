@@ -4,6 +4,7 @@ import  { useEffect } from "react"
 import Head from "../components/head"
 import Portfolios from "../components/portfolios"
 import firebase from "../utils/firebase"
+import axios from "axios"
 
 export default function Home() {
   
@@ -13,21 +14,23 @@ export default function Home() {
 
   const insertLogs = async  () => { 
 
-    let info = {}
+    let location = ""
     try{
-      const response = await fetch("http://www.geoplugin.net/json.gp")
-      const json = await response.json();
-      const { geoplugin_city,geoplugin_region,geoplugin_regionName,geoplugin_countryName,geoplugin_timezone  } = json
-      info = {
-        ip: json.geoplugin_request,
-        location: geoplugin_city+" "+geoplugin_region+" "+geoplugin_regionName+" "+geoplugin_countryName
-      }
-    } catch {}
-      
+      const response = await axios.get("https://ipapi.co/json",{
+       
+      })
+      const json = response.data
+      const { city ,region,  country_name } = json 
+      location = city +" "+ region +" "+country_name 
+    } catch (ex){
+      console.log(ex.message)
+    }
+ 
+  
     firebase.firestore().collection("logs").add({
       date: new Date(),
       agent: navigator.userAgent,
-      info
+      location
     }).then(success=> {
       console.log(success)
     }).catch(ex => {
