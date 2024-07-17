@@ -13,7 +13,11 @@ export default function Home() {
   },[])
 
   const insertLogs = async  () => { 
-
+    const params = new URLSearchParams(window.location.search)
+    if(params.get("isAdmin")){ 
+      return 
+    }
+    
     let location = ""
     try{
       const response = await axios.get("https://ipapi.co/json",{
