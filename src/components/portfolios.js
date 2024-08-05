@@ -3,6 +3,15 @@ import Link from 'next/link'
 
 const projects = [
    {
+      name: "Podsearch (with AI)",
+      link:"https://podsearch-a6uhpq6lmq-uc.a.run.app/",
+      description: "Used to generate transcript from Youtube videos and then utilize ChatGPT for asking any questions regarding the generated transcript.",
+      tools: "NodeJs, ReactJs(NextJs), Firebase, OpenAI",
+      duration:"1 years",
+      image:"/images/podsearch.png",
+      status:"Active (2024)"
+   } ,
+   {
       name: "Cilantro",
       link:"https://cilantropass.com/",
       description: "An online ordering for a restaurant. My role for this was to create new pages and functionalities based on the clients daily needs.",
